@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * ROLE: Application Bootstrapper / Main Entry Point
+ * FILE: main.js
+ * PURPOSE: Instantiates all dependencies across architectural layers (Domain, 
+ *          Adapters, and Infrastructure), wires them together, and boots the presenter.
+ * ============================================================================
+ */
 import * as THREE from './infrastructure/vendor/three.module.js';
 import { PhysicsEngine } from './domain/entities/PhysicsEngine.js';
 import { StepSimulation } from './domain/usecases/StepSimulation.js';

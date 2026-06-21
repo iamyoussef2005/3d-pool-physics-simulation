@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Domain Layer (Entities)
+ * FILE: PhysicsEngine.js
+ * PURPOSE: Core simulation manager computing movements, sliding friction (kinetic),
+ *          rolling resistance, and numerical integration (Euler) for billiard balls.
+ * ============================================================================
+ */
 import { Vector3D } from './Vector3D.js';
 import { PhysBall } from './PhysBall.js';
 

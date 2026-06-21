@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Domain Layer (Entities)
+ * FILE: PhysBall.js
+ * PURPOSE: Represents the physical state and kinematics of a billiard ball.
+ *          Contains mass, radius, position, velocity, and angular velocity.
+ * ============================================================================
+ */
 import { Vector3D } from './Vector3D.js';
 
 // Represents a purely physical ball in the simulation

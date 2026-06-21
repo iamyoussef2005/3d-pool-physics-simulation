@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Infrastructure Layer (Graphics Details)
+ * FILE: BallGraphics.js
+ * PURPOSE: Manages the 3D meshes for billiard balls. Responsible for drawing dynamic 
+ *          canvas textures (for numbered and striped balls) and syncing rotation/positions.
+ * ============================================================================
+ */
 import * as THREE from '../vendor/three.module.js';
 
 export class BallGraphics {

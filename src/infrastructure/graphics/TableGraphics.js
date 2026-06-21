@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Infrastructure Layer (Graphics Details)
+ * FILE: TableGraphics.js
+ * PURPOSE: Builds the 3D model for the pool table. Includes rails, pocket holes/liners,
+ *          felt surface geometry, table legs, cross braces, and wood/felt textures.
+ * ============================================================================
+ */
 import * as THREE from '../vendor/three.module.js';
 
 export class TableGraphics {

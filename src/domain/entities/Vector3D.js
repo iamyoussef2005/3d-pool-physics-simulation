@@ -1,4 +1,11 @@
-// A simple 3D Vector class to keep physics entirely decoupled from Three.js
+/**
+ * ============================================================================
+ * LAYER: Domain Layer (Entities)
+ * FILE: Vector3D.js
+ * PURPOSE: A pure, framework-independent 3D Vector utility class.
+ *          Decouples physics and math logic from Three.js dependencies.
+ * ============================================================================
+ */
 export class Vector3D {
   constructor(x = 0, y = 0, z = 0) {
     this.x = x;

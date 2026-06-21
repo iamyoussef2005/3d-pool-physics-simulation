@@ -1,7 +1,15 @@
+/**
+ * ============================================================================
+ * LAYER: Infrastructure Layer (Graphics Details)
+ * FILE: SceneManager.js
+ * PURPOSE: Manages the WebGL setup, perspective camera, ambient & spotlights, 
+ *          room mesh rendering bounds, window resizing, and OrbitControls.
+ * ============================================================================
+ */
 import * as THREE from '../vendor/three.module.js';
-   import { OrbitControls } from '../vendor/OrbitControls.js';
+import { OrbitControls } from '../vendor/OrbitControls.js';
 
-   export class SceneManager {
+export class SceneManager {
      constructor(container) {
        this.container = container;
        this.scene = new THREE.Scene();

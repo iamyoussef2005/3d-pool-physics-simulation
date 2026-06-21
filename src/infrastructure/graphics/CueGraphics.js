@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Infrastructure Layer (Graphics Details)
+ * FILE: CueGraphics.js
+ * PURPOSE: Builds the 3D model for the cue stick. Includes geometry tapering,
+ *          wood textures, and positioning it relative to the cue ball.
+ * ============================================================================
+ */
 import * as THREE from '../vendor/three.module.js';
 
 export class CueGraphics {

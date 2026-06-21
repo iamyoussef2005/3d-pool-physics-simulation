@@ -1,3 +1,11 @@
+/**
+ * ============================================================================
+ * LAYER: Interface Adapters Layer (Presenters)
+ * FILE: GamePresenter.js
+ * PURPOSE: Orchestrates the game rendering loop. Triggers the physics step use case,
+ *          obtains physical state, and instructs the graphics engine to update positions.
+ * ============================================================================
+ */
 export class GamePresenter {
   constructor(sceneManager, ballGraphics, stepSimulationUseCase, physicsEngine, clock) {
     this.sceneManager = sceneManager;
