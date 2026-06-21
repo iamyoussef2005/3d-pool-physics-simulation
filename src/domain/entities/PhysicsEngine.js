@@ -1,78 +1,5 @@
-// A simple 3D Vector class to keep physics entirely decoupled from Three.js
-export class Vector3D {
-  constructor(x = 0, y = 0, z = 0) {
-    this.x = x;
-    this.y = y;
-    this.z = z;
-  }
-
-  add(v) {
-    this.x += v.x;
-    this.y += v.y;
-    this.z += v.z;
-    return this;
-  }
-
-  sub(v) {
-    this.x -= v.x;
-    this.y -= v.y;
-    this.z -= v.z;
-    return this;
-  }
-
-  multiplyScalar(s) {
-    this.x *= s;
-    this.y *= s;
-    this.z *= s;
-    return this;
-  }
-
-  length() {
-    return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
-  }
-
-  normalize() {
-    let len = this.length();
-    if (len > 0) {
-      this.x /= len;
-      this.y /= len;
-      this.z /= len;
-    }
-    return this;
-  }
-
-  cross(v) {
-    let x = this.y * v.z - this.z * v.y;
-    let y = this.z * v.x - this.x * v.z;
-    let z = this.x * v.y - this.y * v.x;
-    this.x = x;
-    this.y = y;
-    this.z = z;
-    return this;
-  }
-
-  clone() {
-    return new Vector3D(this.x, this.y, this.z);
-  }
-}
-
-// Represents a purely physical ball in the simulation
-export class PhysBall {
-  constructor(id, mass, radius, position) {
-    this.id = id;
-    this.mass = mass;
-    this.radius = radius;
-    this.isSleeping = false;
-    
-    // Linear motion vectors
-    this.position = new Vector3D(position.x, position.y, position.z);
-    this.velocity = new Vector3D(0, 0, 0);
-    this.acceleration = new Vector3D(0, 0, 0);
-    
-    // Rotational motion vector (for later implementation of spin/torque)
-    this.angularVelocity = new Vector3D(0, 0, 0);
-  }
-}
+import { Vector3D } from './Vector3D.js';
+import { PhysBall } from './PhysBall.js';
 
 // The core simulation engine managing the physical world
 export class PhysicsEngine {
@@ -111,7 +38,7 @@ export class PhysicsEngine {
       let v_len = new Vector3D(ball.velocity.x, 0, ball.velocity.z).length();
       let w_len = ball.angularVelocity.length();
 
-      // Check if the ball should be put to sleep (ساكنة)
+      // Check if the ball should be put to sleep
       if (v_len < this.sleepThreshold && w_len < this.sleepThreshold && ball.acceleration.length() === 0) {
         ball.isSleeping = true;
         ball.velocity = new Vector3D(0, 0, 0);
